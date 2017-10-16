@@ -1,4 +1,4 @@
-package com.zhukdi.algorithms.task_1;
+package com.zhukdi.algorithms.services;
 
 import java.io.*;
 import java.util.Arrays;
