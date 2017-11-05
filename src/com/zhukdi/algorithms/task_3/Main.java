@@ -9,16 +9,16 @@ public class Main {
         int aKey;
         Link aDataItem;
         int size, n, keysPerCell = 100;
-        // Ввод размеров
+        // Р’РІРѕРґ СЂР°Р·РјРµСЂРѕРІ
 //        System.out.print("Enter size of hash table: ");
 //        size = getInt();
         size = 117;
         System.out.print("Enter initial number of items: ");
         n = getInt();
-        // Создание таблицы
+        // РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹
         HashTable theHashTable = new HashTable(size);
 
-        for(int j=0; j<n; j++) { // Вставка данных
+        for(int j=0; j<n; j++) { // Р’СЃС‚Р°РІРєР° РґР°РЅРЅС‹С…
             aKey = (int)(java.lang.Math.random() * keysPerCell * size);
             aDataItem = new Link(aKey);
             theHashTable.insert(aDataItem);
@@ -26,7 +26,7 @@ public class Main {
 
         theHashTable.displayTable();
 
-        while(true) // Взаимодействие с пользователем
+        while(true) // Р’Р·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
         {
             System.out.print("Enter first letter of ");
             System.out.print("show, insert, delete, or find: ");

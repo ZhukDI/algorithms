@@ -1,8 +1,8 @@
 package com.zhukdi.algorithms.task_3;
 
 public class Link {
-    private int iData; // Данные
-    public Link next; // Следующий элемент списка
+    private int iData; // Р”Р°РЅРЅС‹Рµ
+    public Link next; // РЎР»РµРґСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°
 
     public Link(int it) {
         iData= it;

@@ -1,42 +1,42 @@
 package com.zhukdi.algorithms.task_3;
 
 public class HashTable {
-    private SortedList[] hashArray; // Массив списков
+    private SortedList[] hashArray; // РњР°СЃСЃРёРІ СЃРїРёСЃРєРѕРІ
     private int arraySize;
 
     public HashTable(int size) {
         arraySize = size;
-        hashArray = new SortedList[arraySize]; // Создание массива
-        for (int j=0; j<arraySize; j++) { // Заполнение массива
-            hashArray[j] = new SortedList(); // списками
+        hashArray = new SortedList[arraySize]; // РЎРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР°
+        for (int j=0; j<arraySize; j++) { // Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°
+            hashArray[j] = new SortedList(); // СЃРїРёСЃРєР°РјРё
         }
     }
 
     public void displayTable() {
-        for (int j=0; j<arraySize; j++) { // Для каждой ячейки
-            System.out.print(j + ": "); // Вывод номера ячейки
-            hashArray[j].displayList(); // Вывод списка
+        for (int j=0; j<arraySize; j++) { // Р”Р»СЏ РєР°Р¶РґРѕР№ СЏС‡РµР№РєРё
+            System.out.print(j + ": "); // Р’С‹РІРѕРґ РЅРѕРјРµСЂР° СЏС‡РµР№РєРё
+            hashArray[j].displayList(); // Р’С‹РІРѕРґ СЃРїРёСЃРєР°
         }
     }
 
-    public int hashFunc(int key) { // Хеш-функция
+    public int hashFunc(int key) { // РҐРµС€-С„СѓРЅРєС†РёСЏ
         return key % 117;
     }
 
-    public void insert(Link link) { // Вставка элемента
+    public void insert(Link link) { // Р’СЃС‚Р°РІРєР° СЌР»РµРјРµРЅС‚Р°
         int key = link.getKey();
-        int hashVal = hashFunc(key); // Хеширование ключа
-        hashArray[hashVal].insert(link); // Вставка в позиции hashVal
+        int hashVal = hashFunc(key); // РҐРµС€РёСЂРѕРІР°РЅРёРµ РєР»СЋС‡Р°
+        hashArray[hashVal].insert(link); // Р’СЃС‚Р°РІРєР° РІ РїРѕР·РёС†РёРё hashVal
     }
 
-    public void delete(int key) { // Удаление элемента
-        int hashVal = hashFunc(key); // Хеширование ключа
-        hashArray[hashVal].delete(key); // Удаление
+    public void delete(int key) { // РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
+        int hashVal = hashFunc(key); // РҐРµС€РёСЂРѕРІР°РЅРёРµ РєР»СЋС‡Р°
+        hashArray[hashVal].delete(key); // РЈРґР°Р»РµРЅРёРµ
     }
 
-    public Link find(int key) { // Поиск элемента
-        int hashVal = hashFunc(key); // Хеширование ключа
-        Link link = hashArray[hashVal].find(key); // Поиск
-        return link; // Метод возвращает найденный элемент
+    public Link find(int key) { // РџРѕРёСЃРє СЌР»РµРјРµРЅС‚Р°
+        int hashVal = hashFunc(key); // РҐРµС€РёСЂРѕРІР°РЅРёРµ РєР»СЋС‡Р°
+        Link link = hashArray[hashVal].find(key); // РџРѕРёСЃРє
+        return link; // РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅР°Р№РґРµРЅРЅС‹Р№ СЌР»РµРјРµРЅС‚
     }
 }

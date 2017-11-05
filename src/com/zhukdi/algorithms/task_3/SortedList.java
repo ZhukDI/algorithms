@@ -1,13 +1,13 @@
 package com.zhukdi.algorithms.task_3;
 
 public class SortedList {
-    private Link first; // Ссылка на первый элемент списка
+    private Link first; // РЎСЃС‹Р»РєР° РЅР° РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР°
 
     public void SortedList() {
         first = null;
     }
 
-    public void insert(Link link) { // Вставка в порядке сортир
+    public void insert(Link link) { // Р’СЃС‚Р°РІРєР° РІ РїРѕСЂСЏРґРєРµ СЃРѕСЂС‚РёСЂ
         int key = link.getKey();
         Link previous = null;
         Link current = first;
@@ -16,10 +16,10 @@ public class SortedList {
             previous = current;
             current = current.next;
         }
-        if (previous==null) // В начале списка
-            first = link; // first --> новый элемент
-        else // Не в начале
-            previous.next = link; // prev --> новый элемент
+        if (previous==null) // Р’ РЅР°С‡Р°Р»Рµ СЃРїРёСЃРєР°
+            first = link; // first --> РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚
+        else // РќРµ РІ РЅР°С‡Р°Р»Рµ
+            previous.next = link; // prev --> РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚
         link.next = current;
     }
 
@@ -41,22 +41,22 @@ public class SortedList {
 
     public void displayList() {
 //        System.out.print("List (first-->last): ");
-        Link current = first; // От начала списка
-        while (current != null) { // Перемещение до конца списка
-            current.displayLink(); // Вывод данных
-            current = current.next; // Переход к следующему элементу
+        Link current = first; // РћС‚ РЅР°С‡Р°Р»Р° СЃРїРёСЃРєР°
+        while (current != null) { // РџРµСЂРµРјРµС‰РµРЅРёРµ РґРѕ РєРѕРЅС†Р° СЃРїРёСЃРєР°
+            current.displayLink(); // Р’С‹РІРѕРґ РґР°РЅРЅС‹С…
+            current = current.next; // РџРµСЂРµС…РѕРґ Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СЌР»РµРјРµРЅС‚Сѓ
         }
         System.out.println("");
     }
 
-    public Link find(int key) { // Поиск элемента с заданным ключом
-        Link current = first; // Начиная от начала списка
-        // До конца списка
-        while(current != null && current.getKey() <= key) { // или пока ключ не превысит current,
-            if(current.getKey() == key) // Искомый элемент?
-                return current; // Совпадение обнаружено
-            current = current.next; // Переход к следующему элементу
+    public Link find(int key) { // РџРѕРёСЃРє СЌР»РµРјРµРЅС‚Р° СЃ Р·Р°РґР°РЅРЅС‹Рј РєР»СЋС‡РѕРј
+        Link current = first; // РќР°С‡РёРЅР°СЏ РѕС‚ РЅР°С‡Р°Р»Р° СЃРїРёСЃРєР°
+        // Р”Рѕ РєРѕРЅС†Р° СЃРїРёСЃРєР°
+        while(current != null && current.getKey() <= key) { // РёР»Рё РїРѕРєР° РєР»СЋС‡ РЅРµ РїСЂРµРІС‹СЃРёС‚ current,
+            if(current.getKey() == key) // РСЃРєРѕРјС‹Р№ СЌР»РµРјРµРЅС‚?
+                return current; // РЎРѕРІРїР°РґРµРЅРёРµ РѕР±РЅР°СЂСѓР¶РµРЅРѕ
+            current = current.next; // РџРµСЂРµС…РѕРґ Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СЌР»РµРјРµРЅС‚Сѓ
         }
-        return null; // Элемент не найден
+        return null; // Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
     }
 }
