@@ -4,6 +4,7 @@ public class InterpolationSearch {
     public static int interpolationSearch(int[] arr, int start, int end, int value, int depth) {
         if (arr[start] == value) {
 //            return start;
+            System.out.println("IS Position: " + start);
             return depth;
         } else if (!(arr[start]<=value && arr[end]>=value)) {
 //            return -1;
@@ -15,6 +16,7 @@ public class InterpolationSearch {
         if (arr[pos] == value) {
             //found
 //            return pos;
+            System.out.println("IS Position: " + pos);
             return depth;
         } else if (arr[pos] < value) {
             //continue in the right part of the arr

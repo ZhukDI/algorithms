@@ -29,7 +29,7 @@ public class Main {
             Arrays.sort(arr);
 //            Random random = new Random();
 //            int x = random.nextInt(RANGE);
-            int x = 2*1*2*1*9*9*8;
+            int x = 2*1*2*1*9*9*8;// 2592
             FileService.writeFile(arr);
             System.out.println("| " + i + " |\t" + BinarySearch.binarySearch(arr, 0, LENGTH-1, x, 0)+"\t|\t" +
                                 InterpolationSearch.interpolationSearch(arr, 0, LENGTH-1, x, 0) + "\t|");

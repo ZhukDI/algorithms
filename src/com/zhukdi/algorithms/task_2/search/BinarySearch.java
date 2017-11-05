@@ -7,6 +7,7 @@ public class BinarySearch {
             // If the element is present at the middle itself
             if(arr[mid] == x) {
 //                return mid;
+                System.out.println("Position: " + mid);
                 return depth;
             }
             // If element is smaller than mid, then it can only be present in left subArray
@@ -21,6 +22,7 @@ public class BinarySearch {
         }
         // We reach here when element is not present in array
 //        return -1;
+        System.out.println("Position: -1");
         return depth;
     }
 }

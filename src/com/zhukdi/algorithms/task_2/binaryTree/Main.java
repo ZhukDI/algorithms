@@ -23,5 +23,7 @@ public class Main {
         tree.rotateLeft();
         tree.displayTree();
         System.out.println(tree.find(0));
+
+
     }
 }

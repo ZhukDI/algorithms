@@ -1,7 +1,6 @@
 package com.zhukdi.algorithms.services;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class FileService {
