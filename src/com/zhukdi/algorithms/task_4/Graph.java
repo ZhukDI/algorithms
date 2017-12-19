@@ -2,13 +2,14 @@ package com.zhukdi.algorithms.task_4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Graph {
     private final int MAX_VERTS = 20;
     private Vertex vertexList[];
     private int adjMat[][];
     private int nVerts; // текущее количество вершин
-    private StackX theStack;
+    private Stack<Integer> stack;
 
 
     public Graph() {
@@ -21,7 +22,7 @@ public class Graph {
                 adjMat[j][k] = 0;
             }
         }
-        theStack = new StackX();
+        stack = new Stack<>();
     }
 
     public void addVertex(char lab) {
@@ -31,6 +32,11 @@ public class Graph {
     public void addEdge(int start, int end) {
         adjMat[start][end] = 1;
         adjMat[end][start] = 1;
+    }
+
+    public void addEdge(int start, int end, int weigh) {
+        adjMat[start][end] = weigh;
+        adjMat[end][start] = weigh;
     }
 
     public void displayVertex(int v) {
@@ -85,20 +91,19 @@ public class Graph {
         vertexList[0].wasVisited = true;
         List<Integer> visitedVertexList = new ArrayList<>();
         visitedVertexList.add(0);
-//        displayVertex(0);
-        theStack.push(0);
+        stack.push(0);
 
 
-        while (!theStack.isEmpty()) {
-            int v = getAdjUnvisitedVertex(theStack.peek());
+        while (!stack.isEmpty()) {
+            int v = getAdjUnvisitedVertex(stack.peek());
             if(v == -1) { // Если такой вершины нет,
-                theStack.pop(); // элемент извлекается из стека
+                stack.pop(); // элемент извлекается из стека
             }
             else { // Если вершина найдена
                 vertexList[v].wasVisited = true; // Пометка
 //                displayVertex(v); // Вывод
                 visitedVertexList.add(v);
-                theStack.push(v); // Занесение в стек
+                stack.push(v); // Занесение в стек
             }
         }
         // Стек пуст, работа закончена

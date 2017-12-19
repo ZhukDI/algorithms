@@ -33,8 +33,7 @@ public class MST
     {
         System.out.println("Edge   Weight");
         for (int i = 1; i < V; i++)
-            System.out.println(parent[i]+" - "+ i+"    "+
-                    graph[i][parent[i]]);
+            System.out.println(parent[i]+" - "+ i + "    "+ graph[i][parent[i]]);
     }
 
     // Function to construct and print MST for a graph represented
@@ -51,8 +50,7 @@ public class MST
         Boolean mstSet[] = new Boolean[V];
 
         // Initialize all keys as INFINITE
-        for (int i = 0; i < V; i++)
-        {
+        for (int i = 0; i < V; i++) {
             key[i] = Integer.MAX_VALUE;
             mstSet[i] = false;
         }
@@ -63,8 +61,7 @@ public class MST
         parent[0] = -1; // First node is always root of MST
 
         // The MST will have V vertices
-        for (int count = 0; count < V-1; count++)
-        {
+        for (int count = 0; count < V-1; count++) {
             // Pick thd minimum key vertex from the set of vertices
             // not yet included in MST
             int u = minKey(key, mstSet);

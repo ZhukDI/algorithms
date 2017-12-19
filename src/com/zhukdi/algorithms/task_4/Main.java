@@ -21,6 +21,8 @@ public class Main {
         graph.displayAdjMat();
 
 
+
+
         System.out.println(graph.checkForEulerPath());
 //        graph.dfs();
     }
