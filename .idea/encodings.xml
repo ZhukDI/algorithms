@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/array.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/services/FileService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_1/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_1/sort/HybridSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_1/sort/InsertionSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_1/sort/QuickSort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/binaryTree/BinaryTree.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/binaryTree/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/binaryTree/Node.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/search/BinarySearch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/search/InterpolationSearch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_2/search/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_3/HashTable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_3/Link.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_3/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/zhukdi/algorithms/task_3/SortedList.java" charset="UTF-8" />
+  </component>
+</project>
